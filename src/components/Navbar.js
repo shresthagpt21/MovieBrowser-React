@@ -3,8 +3,12 @@ import {useNavigate,Link} from 'react-router-dom';
 const Navbar= ({searchText,setSearchText})=>{
 const navigate=useNavigate()
 const updateSearchText=(e)=>{
-  navigate('/search')
+  navigate('/searchAll')
   // console.log(e.target.value);
+  setSearchText(e.target.value);
+}
+const onClickUpdate=(e)=>{
+  navigate('/searchAll')
   setSearchText(e.target.value);
 }
 
@@ -32,7 +36,7 @@ const updateSearchText=(e)=>{
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" 
             value={searchText}
             onChange={updateSearchText}/>
-            <button className="btn btn-outline-success" type="submit">Search</button>
+            <button className="btn btn-outline-success" onClick={onClickUpdate}  type="submit">Search</button>
           </form>
         </div>
       </div>

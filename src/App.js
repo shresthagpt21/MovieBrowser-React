@@ -2,11 +2,12 @@
 import './App.css';
 import Navbar from './components/Navbar';
 // import Home from './components/Home';
-// import AboutView from './components/AboutView';
+import AboutAll from './components/AboutAll';
 import SearchView from './components/SearchView';
 import { Routes,Route } from 'react-router-dom';
 import {useState, useEffect} from 'react';
 import MovieView from './components/MovieView';
+
 
 
 
@@ -37,7 +38,7 @@ function App() {
       <Navbar searchText={searchText} setSearchText={setSearchText} />
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
-        {/* <Route path="/about" element={<AboutView />} />  */}
+        <Route path="/searchAll" element={<AboutAll keyword={searchText} searchResults={searchResults} />} /> 
         <Route path="/search" element={<SearchView keyword={searchText} searchResults={searchResults} />} />  
         <Route path="/movies/:id" element={<MovieView />} /> 
 

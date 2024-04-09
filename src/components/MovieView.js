@@ -8,6 +8,8 @@ const MovieView=()=>{
   const [movieDetails,setMovieDetails]=useState({})
   const [isLoading, setIsLoading]=useState(true)
 
+
+
 //https://api.themoviedb.org/3/movie/157336?api_key=ee9db4c9517ab86c4ccb72dbc4b5e5b0
 
   useEffect(()=>{
